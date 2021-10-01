@@ -4,9 +4,9 @@ import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-const Note = ({ id, noteTitle, content, starred, locked }) => {
+const Note = ({ id, noteTitle, content, starred, locked }, { navigation }) => {
     return (
-        <TouchableOpacity style={styles.listItem} id={id}>
+        <TouchableOpacity style={styles.listItem} id={id} onPress={() => navigation.navigate("Note")}>
             <Text style={styles.listItemText}>{noteTitle}</Text>
             <View style={styles.iconDiv}>
                 {

@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home';
 import AllNotes from './screens/AllNotes';
+import Note from './screens/Note';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
       <Stack.Navigator screenOptions={globalScreenOptions}>
         <Stack.Screen options={{header: () => null}} name="Home" component={Home}/>
         <Stack.Screen options={{header: () => null}} name="AllNotes" component={AllNotes}/>
+        <Stack.Screen options={{header: () => null}} name="Note" component={Note}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
